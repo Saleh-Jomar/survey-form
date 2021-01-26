@@ -2,14 +2,17 @@
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.4;
     color: #000000;
     z-index: -1;
-    background-image: linear-gradient(35deg,#CCFFFF,#FFCCCC);
+    background-image: linear-gradient(35deg, rgba(204,255,255,0.8),rgba(255,204,204,0.7)),
+    url(../Images/blackpink.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 header {
     padding: 50px 10px 30px;
@@ -32,26 +35,62 @@ main {
     max-width: 720px;
     margin: 0 auto;
     padding: 0 30px;
-    
-    
 }
 form {
     width: 100%;
-    padding: 30px;
+    padding: 40px;
+    margin-bottom: 20px;
     text-align: left;
     border-radius: 10px;
-    background-color: #CCFFFF;
-}
-form input {
-    width: 100%;
-    height: 38px;
-    padding: 6px 12px;
-    border: 1px solid #ced4da;
-    
+    background: rgba(204,255,255,0.8);
 }
 label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     font-size: 18px;
-    margin-bottom: 8px;
+    margin:20px 0px 8px;
+}
+.form-input-text {
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    border: 1px solid #ced4da;   
+}
+.form-input-text:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 2.5px rgba(0, 123, 255, 0.25);
+}
+.input-radio,.input-boxes {
+    display: inline-block;
+    margin: 0px 10px 0px 0px ;
+    min-width: 20px;
+    min-height: 20px;
+}
+.radio-check-label {
+    margin-top: 0px;
+}
+.instruction {
+    margin-left: 4x;
+    font-size: 14px;
+}
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+    padding: 15px;
+    font-size: 16px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 20px auto;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 5px;
 }

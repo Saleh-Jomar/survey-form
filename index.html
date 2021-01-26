@@ -10,16 +10,40 @@
     <body>
         <header>
             <h1 id="title">Survey Form</h1>
-            <p id="description">Thank you for taking your time helping our Research!</p>
+            <p id="description">Thank you for taking your time answering the survey!</p>
         </header>
         <main>
             <form id="survey-form">
-                <label for="name" id="name" >Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" class="form-input-text" required>
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email" class="form-input-text" required>
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="Age" id="number" placeholder="Enter your Age" class="form-input-text" min="18" max="99">
+                <label id="drop-down-label" for="dropdown">Who is your Blackpink bias?</label>
+                <select id="dropdown" name="bias" class="form-input-text" required>
+                    <option disabled selected value="">Select current bias</option>
+                    <option value="Jennie">Jennie</option>
+                    <option value="Lisa">Lisa</option>
+                    <option value="Rose">Rose</option>
+                    <option value="Jisoo">Jisoo</option>
+                    <option value="noanswer">Prefer not to say</option>
+                </select>
+                <label>Would you recommend Blackpink to a friend?</label>
+                <label for="Definitely" class="radio-check-label"><input type="radio" name="recommended" value="Definitely" class="input-radio" checked>Definitely</label>
+                <label for="Maybe" class="radio-check-label"><input type="radio" name="recommended" value="Maybe" class="input-radio">Maybe</label>
+                <label for="NotSure" class="radio-check-label"><input type="radio" name="recommended" value="NotSure" class="input-radio">Not Sure</label>
+                <label>Which Blackpink songs will you recommend?<p class="instruction">(check all that applies)</p></label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="How-you-like-that" class="input-boxes">How you like that</label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="DDU-DU-DDU-DU" class="input-boxes">DDU-DU DDU-DU</label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="Boombayah" class="input-boxes">Boombayah</label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="Pretty-Savage" class="input-boxes">Pretty Savage</label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="Ice-Cream" class="input-boxes">Ice Cream</label>
+                <label class="radio-check-label"><input type="checkbox" name="Blackpink-songs" value="Kill-This-Love" class="input-boxes">Kill This Love</label>
+                <label >Any comments or suggestion?</label>
+                <textarea name="comment" id="comments" placeholder="Enter your comment here..."></textarea>
+                <button type="submit" id="submit">Submit</button>
             </form>
-
-
         </main>
     </body>
-
 </html>
